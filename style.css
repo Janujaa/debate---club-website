@@ -23,6 +23,22 @@ body{
   -webkit-tap-highlight-color:transparent;
 }
 
+/* BACKGROUND CANVAS LAYER */
+#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;mix-blend-mode:normal}
+.site-content{position:relative;z-index:10}
+
+/* Neon accents and subtle scanline overlay */
+.neon-glow{box-shadow:0 6px 28px rgba(229,9,20,0.18), 0 0 48px rgba(229,9,20,0.06) inset}
+.scanlines::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px);background-size:100% 3px;mix-blend-mode:overlay;opacity:0.12}
+
+/* Slight backdrop for cards to pop above animated background */
+.card, .hero-right, header, footer{background-clip:padding-box}
+
+/* reduce heavy shadows on small screens for performance */
+@media (max-width:640px){
+  .card:hover{transform:none;box-shadow:none}
+}
+
 .wrap{max-width:var(--maxw);margin:0 auto;padding:2rem}
 
 /* NAV */
@@ -100,3 +116,67 @@ footer{padding:2rem 0;color:var(--muted);font-size:.9rem}
 
 /* tiny accessibility focus styles */
 a:focus,button:focus,input:focus,textarea:focus{box-shadow:0 0 0 3px rgba(229,9,20,0.12);outline:none}
+
+/* INTRO SPLASH SCREEN */
+.intro-splash{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#050505;
+  pointer-events:none;
+  opacity:1;
+  transition:opacity 600ms ease-out 1200ms;
+}
+.intro-splash.fade-out{opacity:0}
+
+.intro-content{
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1rem;
+  will-change:transform;
+}
+
+.intro-title{
+  font-size:4.2rem;
+  font-weight:800;
+  margin:0;
+  color:#fff;
+  text-align:center;
+  letter-spacing:1px;
+  line-height:1.1;
+  animation:intro-title-dramatic 2200ms cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+  text-shadow:0 12px 48px rgba(229,9,20,0.2);
+}
+
+@keyframes intro-title-dramatic {
+  0%{
+    transform:scale(2.4) translateY(80px);
+    opacity:0;
+    filter:blur(12px);
+  }
+  15%{
+    opacity:1;
+    filter:blur(0);
+  }
+  80%{
+    transform:scale(1) translateY(0);
+    opacity:1;
+  }
+  100%{
+    transform:scale(1) translateY(0);
+    opacity:0;
+  }
+}
+
+/* Header intro state - hidden initially, then revealed after splash */
+.header-intro{opacity:0;transition:opacity 400ms ease-out 1600ms}
+.header-intro.reveal{opacity:1}
+
+/* Main content fade-in after splash */
+.main-intro .main-inner{opacity:0;transition:opacity 600ms ease-out 1400ms}
+.main-intro .main-inner.reveal{opacity:1}

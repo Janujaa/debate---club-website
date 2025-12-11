@@ -11,7 +11,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  
+  <!-- Splash intro overlay -->
+  <div id="intro-splash" aria-hidden="true" class="intro-splash">
+    <div class="intro-content">
+      <h1 class="intro-title">SRM Debate Club</h1>
+    </div>
+  </div>
+
+  <header id="site-header" class="header-intro">
     <div class="wrap nav">
       <div class="brand">
         <div class="logo">SD</div>
@@ -25,7 +34,6 @@
         <ul>
           <li><a class="grow-on-hover" href="#about">About</a></li>
           <li><a class="grow-on-hover" href="#resources">Resources</a></li>
-          <li><a class="grow-on-hover" href="#achievements">Achievements</a></li>
           <li><a class="grow-on-hover" href="#contact">Contact</a></li>
           <li><a class="cta" href="#learn">Learn Debate</a></li>
         </ul>
@@ -33,13 +41,14 @@
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="wrap site-content scanlines main-intro">
+    <div class="main-inner">
     <section class="hero">
       <div class="hero-left">
         <h2>SRM Debate Club — where voices sharpen into arguments.</h2>
         <p>Community-led training, event listings, resources for freshers, and a platform to showcase your wins. Join us to learn formats, research efficiently, and compete with confidence.</p>
         <div class="actions">
-          <button class="btn primary" onclick="location.href='#learn'">Learn Debate</button>
+          <button class="btn primary" onclick="location.href='#resources'">Learn Debate</button>
           <button class="btn secondary" id="eventsBtn">Events</button>
 
         </div>
@@ -144,35 +153,12 @@
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
             <small class="note">Judging</small>
-            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+            <a href="Resources/judge-guides.html" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
           </div>
         </article>
       </div>
 
     </section>
-
-    <section id="achievements">
-      <div class="section-title">
-        <h3>Achievements</h3>
-      </div>
-      <div class="achievements">
-        <div class="achievement">
-          <strong>National Parliamentary – 2025</strong>
-          <div class="note">Top 8 team; Best Speaker (Regional)</div>
-        </div>
-        <div class="achievement">
-          <strong>Inter-College Summit — 2024</strong>
-          <div class="note">Organized 3 intra-college tournaments with 20+ teams.</div>
-        </div>
-        <div class="achievement">
-          <strong>Campus Workshops</strong>
-          <div class="note">Weekly workshops with guest judges and research sessions.</div>
-        </div>
-      </div>
-    </section>
-
-
-
 
     <section id="contact">
       <div class="section-title">
@@ -210,11 +196,15 @@
         <div style="color:var(--muted);font-size:.92rem">Hosted on GitHub Pages • <a href="#" style="color:var(--accent);text-decoration:none">Contribute</a></div>
       </div>
     </footer>
+    </div>
   </main>
 
-  <!-- link to script -->
+  <!-- intro animation script -->
+  <script src="assets/intro.js" defer></script>
+  <!-- background animation script -->
+  <script src="assets/bg.js" defer></script>
+  <!-- app script -->
   <script src="app.js"></script>
-  <link rel="stylesheet" href="style.css">
 
 </body>
 </html>
