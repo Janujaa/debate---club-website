@@ -5,6 +5,20 @@
 
   if(!splash || !header || !main) return;
 
+  // Check if intro has already been shown this session
+  const hasSeenIntro = sessionStorage.getItem('srm-intro-shown');
+  
+  if(hasSeenIntro){
+    // Skip intro, show page immediately
+    splash.style.display = 'none';
+    header.classList.add('reveal');
+    main.classList.add('reveal');
+    return;
+  }
+
+  // Mark intro as shown for this session
+  sessionStorage.setItem('srm-intro-shown', 'true');
+
   // Calculate header logo position to animate towards
   function getHeaderLogoPos(){
     const logo = header.querySelector('.logo');
