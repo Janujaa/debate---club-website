@@ -5,10 +5,12 @@
 
   if(!splash || !header || !main) return;
 
-  // Check if intro has already been shown this session
-  const hasSeenIntro = sessionStorage.getItem('srm-intro-shown');
+  // Check if intro has already been shown today
+  const today = new Date().toDateString();
+  const lastIntroDate = localStorage.getItem('srm-intro-date');
+  const hasSeenIntroToday = lastIntroDate === today;
   
-  if(hasSeenIntro){
+  if(hasSeenIntroToday){
     // Skip intro, show page immediately
     splash.style.display = 'none';
     header.classList.add('reveal');
@@ -16,8 +18,8 @@
     return;
   }
 
-  // Mark intro as shown for this session
-  sessionStorage.setItem('srm-intro-shown', 'true');
+  // Mark intro as shown for today
+  localStorage.setItem('srm-intro-date', today);
 
   // Calculate header logo position to animate towards
   function getHeaderLogoPos(){
