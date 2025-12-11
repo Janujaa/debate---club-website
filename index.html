@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRM Debate Club</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="SRM Debate Club — resources, events, and community for debaters." />
+  <!-- link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo">SD</div>
+        <div>
+          <h1>SRM Debate Club</h1>
+          <div style="font-size:.78rem;color:var(--muted)">Speak. Argue. Win.</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a class="grow-on-hover" href="#about">About</a></li>
+          <li><a class="grow-on-hover" href="#resources">Resources</a></li>
+          <li><a class="grow-on-hover" href="#achievements">Achievements</a></li>
+          <li><a class="grow-on-hover" href="#contact">Contact</a></li>
+          <li><a class="cta" href="#learn">Learn Debate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-left">
+        <h2>SRM Debate Club — where voices sharpen into arguments.</h2>
+        <p>Community-led training, event listings, resources for freshers, and a platform to showcase your wins. Join us to learn formats, research efficiently, and compete with confidence.</p>
+        <div class="actions">
+          <button class="btn primary" onclick="location.href='#learn'">Learn Debate</button>
+          <button class="btn secondary" id="eventsBtn">Events</button>
+
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="stat">
+          <div>
+            <div style="font-size:.84rem;color:var(--muted)">Active Members</div>
+            <div class="num">142</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.84rem;color:var(--muted)">Events / year</div>
+            <div style="font-weight:800;font-size:1.4rem;color:#fff">8</div>
+          </div>
+        </div>
+
+        <hr style="margin:1rem 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
+
+        <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+          <div style="font-size:.9rem;color:var(--muted)">Next meeting</div>
+          <div style="font-weight:700">Tue, 16 Dec • 5:00 PM</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h3>About</h3>
+      </div>
+      <p class="subtitle">SRM Debate Club trains beginners and advanced debaters across formats — Parliamentary, Asian, British, and Public Forum. We host workshops, internal practice rounds, and represent SRM at inter-college competitions.</p>
+    </section>
+
+    <section id="resources">
+      <div class="section-title">
+        <h3>Resources</h3>
+      </div>
+
+      <div class="grid">
+        <article class="card" tabindex="0">
+          <div>
+            <h4>Parliamentary (BP/OP)</h4>
+            <p class="subtitle">Structure, role duties, motion analysis, and practice templates for British & Asian styles.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+            <small class="note">Beginner → Advanced</small>
+            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div>
+            <h4>Public Forum</h4>
+            <p class="subtitle">Quick prep, clash techniques, evidence use, and judge-centric strategies.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+            <small class="note">Practical drills</small>
+            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+            <div>
+                <h4>World Schools Debate</h4>
+                <p class="subtitle">Roles, prep strategy,speech templates and judge expectations.</p>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+                <small class="note">Intermediate level</small>
+                <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+        
+            </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div>
+            <h4>Policy / Technical</h4>
+            <p class="subtitle">Deep-research methods, evidence management, and case-writing templates for policy-style debates.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+            <small class="note">Research focus</small>
+            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div>
+            <h4>Public Speaking & Delivery</h4>
+            <p class="subtitle">Voice drills, body language, time management, and speech structuring.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+            <small class="note">Delivery drills</small>
+            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div>
+            <h4>Evidence & Docs</h4>
+            <p class="subtitle">How to gather, cite and store evidence; sample briefs and shared Google Drive templates.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+            <small class="note">Templates</small>
+            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div>
+            <h4>Judge Guides</h4>
+            <p class="subtitle">What judges look for in each format and how to adapt your case accordingly.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.8rem">
+            <small class="note">Judging</small>
+            <a href="#" class="grow-on-hover" style="font-weight:700;text-decoration:none;color:var(--accent)">View</a>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <section id="achievements">
+      <div class="section-title">
+        <h3>Achievements</h3>
+      </div>
+      <div class="achievements">
+        <div class="achievement">
+          <strong>National Parliamentary – 2025</strong>
+          <div class="note">Top 8 team; Best Speaker (Regional)</div>
+        </div>
+        <div class="achievement">
+          <strong>Inter-College Summit — 2024</strong>
+          <div class="note">Organized 3 intra-college tournaments with 20+ teams.</div>
+        </div>
+        <div class="achievement">
+          <strong>Campus Workshops</strong>
+          <div class="note">Weekly workshops with guest judges and research sessions.</div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="contact">
+      <div class="section-title">
+        <h3>Contact</h3>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p class="subtitle">For collaborations, joining, or judging requests, use the form. You can also email <strong>debate@srm.edu</strong>.</p>
+
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Tell us how we can help" required></textarea>
+            <div style="display:flex;gap:.6rem;margin-top:.4rem">
+              <button class="btn primary" type="submit">Send Message</button>
+              <button class="btn" type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+
+        <aside>
+          <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
+            <h4 style="margin:0 0 .4rem">Club Leads</h4>
+            <div style="color:var(--muted);font-size:.95rem">President: Name S.<br/>Coach: Prof. X<br/>Events: Y</div>
+            <hr style="margin:1rem 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
+            <p class="note">Follow us on campus socials for scheduling updates and workshop resources.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div>© SRM Debate Club • Built with ❤️</div>
+        <div style="color:var(--muted);font-size:.92rem">Hosted on GitHub Pages • <a href="#" style="color:var(--accent);text-decoration:none">Contribute</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- link to script -->
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</body>
+</html>
